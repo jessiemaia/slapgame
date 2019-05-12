@@ -1,0 +1,46 @@
+.fullPage {
+  background-image: url('/assets/hiking.jpg');
+  background-size: cover;
+  color: white; 
+  font-family: 'Courier New', Courier, monospace;
+  margin: 5vh;
+}
+
+
+#topBar {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  width: 100vh;
+  height: 20vh;
+  text-align: center;
+  align-items: center;
+}
+
+#middle {
+  display: flex;
+  margin-top: 10vh;
+  height: auto;
+  width: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  justify-content: center;
+}
+
+#bearScore {
+  margin-top: 7vh;
+  justify-content: center;
+}
+
+#bottom {
+  display: flex;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding-left: 100px;
+  width: 100%;
+  height: 25vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  flex-direction: column;
+  justify-content: center;
+}
+
+

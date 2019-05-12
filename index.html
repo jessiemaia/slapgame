@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Slap Game- Bear Edition</title>
+</head>
+
+<body class="fullPage">
+  <header class="container-fluid" id="topBar">
+    <div class="row">
+      <div class="col-12 ">
+        <h1><b>Don't Poke the Bear</b></h1>
+        <h5><b>On a lovely forrest hike you turn around and you're face to face with a bear... What should you do?</h5>
+        </b>
+      </div>
+    </div>
+  </header>
+  <main class="container-fluid" id="middle">
+    <div class="row">
+      <div class="col-6">
+        <img id="bear-image" src="/assets/happybear2.jpg" alt="bear">
+      </div>
+      <div class="col-6" id="bearScore">
+        <h1><b>Hiker Health Level: <span id="health">100</span></h1></b>
+      </div>
+    </div>
+  </main>
+  <footer class="container-fluid" id="bottom">
+    <div class="row">
+      <div class="col-4">
+        <h5><b>Choose your move!</b></h5>
+        <button id="poke-button" class="btn btn-danger first" onclick="poke()">Poke</button>
+        <button id="slap-button" class="btn btn-danger first" onclick="slap()">Slap</button>
+        <button id="kick-button" class="btn btn-danger first" onclick="kick()">Kick</button>
+      </div>
+      <div class="col-4">
+        <h5><b>Well, that was a bad idea!</b></h5>
+        <button id="run-button" class="btn btn-success" onclick="run()">Run!</button>
+        <button id="mace-button" class="btn btn-success" onclick="swim()">Bear mace!</button>
+        <button id="feed-button" class="btn btn-success" onclick="feed()">Feed bear?</button>
+      </div>
+      <div class="col-4">
+        <h5><b>You've been mauled</b></h5>
+        <br><button id="reset-button" class="btn btn-danger" onclick="reset()">Try again</button><br>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+
+
+  <script src="app.js" type=""></script>
+</body>
+
+</html>
