@@ -5,6 +5,13 @@ let bear = {
   tolerance: 3,
   moodIndex: 0,
   images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
+  items: ['run', 'mace', 'feed']
+}
+
+let items = {
+  run: { name: 'Run!', modifier: 1, description: 'RUN!' },
+  mace: { name: 'Bear mace!', modifier: 5, descriptions: 'BEAR MACE!' },
+  feed: { name: 'Feed bear', modifier: 20, descriptions: 'Feed bear' }
 }
 
 function poke() {
