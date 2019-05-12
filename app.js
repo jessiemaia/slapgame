@@ -1,28 +1,50 @@
-let bear = {
+let activeBear = 0;
+
+let bear = [{
+  name: 'Happy Bear',
   health: 100,
   poke: 0,
   slap: 0,
   kick: 0,
+  tolerance: 3,
+  moodIndex: 0,
+  images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
+}, {
+  name: 'Angry Bear',
+  health: 100,
+  poke: 0,
+  slap: 0,
+  kick: 0,
+  tolerance: 1,
+  moodIndex: 0,
+  images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
+}, {
+  name: 'Bear Attack',
+  health: 100,
+  poke: 0,
+  slap: 0,
+  kick: 0,
+  tolerance: 0,
   moodIndex: 0,
   images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
 }
 
 function poke() {
   bear.health--
-  setMoodIndex()
+  update()
 }
 
 function slap() {
   bear.health -= 30
-  setMoodIndex()
+  update()
 }
 
 function kick() {
   bear.health -= 50
-  setMoodIndex()
+  update()
 }
 
-function setMoodIndex() {
+function update() {
   if (bear.health <= 0) {
     bear.moodIndex = 2;
   }
@@ -57,21 +79,21 @@ function drawBear() {
 
 function run() {
   bear.health++
-  setMoodIndex()
+  update()
 }
 
 function swim() {
   bear.health += 10
-  setMoodIndex()
+  update()
 }
 
 function feed() {
   bear.health += 25
-  setMoodIndex()
+  update()
 }
 
 function reset() {
   bear.moodIndex = 0
   bear.health = 100
-  setMoodIndex()
+  update()
 }
