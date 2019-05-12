@@ -1,46 +1,27 @@
-let activeBear = 0;
-
-let bear = [{
+let bear = {
   name: 'Happy Bear',
   health: 100,
-  poke: 0,
-  slap: 0,
-  kick: 0,
+  hits: 0,
   tolerance: 3,
-  moodIndex: 0,
-  images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
-}, {
-  name: 'Angry Bear',
-  health: 100,
-  poke: 0,
-  slap: 0,
-  kick: 0,
-  tolerance: 1,
-  moodIndex: 0,
-  images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
-}, {
-  name: 'Bear Attack',
-  health: 100,
-  poke: 0,
-  slap: 0,
-  kick: 0,
-  tolerance: 0,
   moodIndex: 0,
   images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
 }
 
 function poke() {
   bear.health--
+  bear.hits++
   update()
 }
 
 function slap() {
   bear.health -= 30
+  bear.hits++
   update()
 }
 
 function kick() {
   bear.health -= 50
+  bear.hits++
   update()
 }
 
@@ -59,6 +40,7 @@ function update() {
 
 function drawBear() {
   document.getElementById("health").innerText = bear.health.toString()
+  document.getElementById("hits").innerText = bear.hits.toString()
   document.getElementById("bear-image").setAttribute("src", bear.images[bear.moodIndex])
   if (bear.moodIndex == bear.images.length - 1) {
     document.getElementById("poke-button").disabled = true;
@@ -95,5 +77,6 @@ function feed() {
 function reset() {
   bear.moodIndex = 0
   bear.health = 100
+  bear.hits = 0
   update()
 }
