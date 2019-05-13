@@ -1,33 +1,42 @@
 let bear = {
-  name: 'Happy Bear',
+  name: 'Mr Bear',
   health: 100,
   hits: 0,
   tolerance: 3,
   moodIndex: 0,
   images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
-  items: ['run', 'mace', 'feed']
+  items: []
 }
 
 let items = {
-  run: { name: 'Run!', modifier: 1, description: 'RUN!' },
-  mace: { name: 'Bear mace!', modifier: 5, descriptions: 'BEAR MACE!' },
-  feed: { name: 'Feed bear', modifier: 20, descriptions: 'Feed bear' }
+  run: { name: 'Run', modifier: -1 },
+  mace: { name: 'Bear Mace', modifier: 20 },
+  feed: { name: 'Feed bear', modifier: 20 },
+}
+
+function adMods() {
+  let modifyTotal = 0
+  for (let i = 0; i < bear.items.length; i++) {
+    let item = bear.items[i]
+    modifyTotal += item.modifier
+  }
+  return modifyTotal
 }
 
 function poke() {
-  bear.health--
+  bear.health -= 1 - adMods()
   bear.hits++
   update()
 }
 
 function slap() {
-  bear.health -= 30
+  bear.health -= 30 + adMods()
   bear.hits++
   update()
 }
 
 function kick() {
-  bear.health -= 50
+  bear.health -= 50 + adMods()
   bear.hits++
   update()
 }
@@ -67,23 +76,21 @@ function drawBear() {
 }
 
 function run() {
-  bear.health++
-  update()
+  bear.items.push(items.run)
 }
 
 function swim() {
-  bear.health += 10
-  update()
+  bear.items.push(items.mace)
 }
 
 function feed() {
-  bear.health += 25
-  update()
+  bear.items.push(items.feed)
 }
 
 function reset() {
   bear.moodIndex = 0
   bear.health = 100
   bear.hits = 0
+  bear.items = []
   update()
 }
