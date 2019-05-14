@@ -1,3 +1,4 @@
+
 let bear = {
   name: 'Mr Bear',
   health: 100,
@@ -94,3 +95,4 @@ function reset() {
   bear.items = []
   update()
 }
+

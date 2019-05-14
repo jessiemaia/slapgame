@@ -37,14 +37,17 @@
     <div class="row">
       <div class="col-4">
         <h5><b>Choose your move!</b></h5>
-        <button id="poke-button" class="btn btn-danger first" onclick="poke()">Poke</button>
-        <button id="slap-button" class="btn btn-danger first" onclick="slap()">Slap</button>
-        <button id="kick-button" class="btn btn-danger first" onclick="kick()">Kick</button>
+        <button id="poke-button" class="btn btn-danger first"
+          onclick="app.controllers.gameController.attackBear('poke')">Poke</button>
+        <button id="slap-button" class="btn btn-danger first"
+          onclick="app.controllers.gameController.attackBear('slap')">Slap</button>
+        <button id="kick-button" class="btn btn-danger first"
+          onclick="app.controllers.gameController.attackBear('kick')">Kick</button>
       </div>
       <div class="col-4">
         <h5><b>Bad plan! Choose a weapon!</b></h5>
         <button id="stick-button" class="btn btn-success" onclick="stick()">Walking Stick!</button>
-        <button id="mace-button" class="btn btn-success" onclick="swi3()">Bear mace!</button>
+        <button id="mace-button" class="btn btn-success" onclick="mace()">Bear mace!</button>
         <button id="taser-button" class="btn btn-success" onclick="taser()">Taser!</button>
       </div>
       <div class="col-4">

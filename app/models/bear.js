@@ -3,9 +3,9 @@ export default class Bear {
     this.name = name
     this.health = health
     this.attacks = {
-      "poke": poke
-      "slap": slap
-      "kick"; kick
+      "poke": poke,
+      "slap": slap,
+      "kick": kick
     }
     this.items = []
     this.hits = 0
