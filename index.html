@@ -45,14 +45,18 @@
           onclick="app.controllers.gameController.attackBear('kick')">Kick</button>
       </div>
       <div class="col-4">
-        <h5><b>Bad plan! Choose a weapon!</b></h5>
-        <button id="stick-button" class="btn btn-success" onclick="stick()">Walking Stick!</button>
-        <button id="mace-button" class="btn btn-success" onclick="mace()">Bear mace!</button>
-        <button id="taser-button" class="btn btn-success" onclick="taser()">Taser!</button>
+        <h5><b>He's mad! Choose a weapon!</b></h5>
+        <button id="stick-button" class="btn btn-success"
+          onclick="app.controllers.gameController.attackBear('stick')">Walking Stick!</button>
+        <button id="mace-button" class="btn btn-success"
+          onclick="app.controllers.gameController.attackBear('mace')">Bear mace!</button>
+        <button id="taser-button" class="btn btn-success"
+          onclick="app.controllers.gameController.attackBear('taser')">Taser!</button>
       </div>
       <div class="col-4">
         <h5><b>You've been mauled</b></h5>
-        <br><button id="reset-button" class="btn btn-danger" onclick="reset()">Try again</button><br>
+        <br><button id="reset-button" class="btn btn-danger"
+          onclick="app.controllers.gameController.attackBear('reset')">Try again</button><br>
       </div>
     </div>
     </div>

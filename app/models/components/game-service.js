@@ -26,6 +26,7 @@ export default class GameService {
   attackBear(attackName) {
     let attackDamage = _bear.attacks[attackName]
     _bear.health -= attackDamage
+    console.log(_bear.health)
     _bear.hits++
   }
 }
