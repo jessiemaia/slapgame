@@ -15,11 +15,11 @@ function draw() {
 export default class GameController {
   constructor() { }
 
-  addItemToTarget(itemIndex) {
+  addItemToBear(itemIndex) {
     _gameService.addItemToBear(itemIndex)
   }
 
-  attackTarget(attackName) {
+  attackBear(attackName) {
     _gameService.attackBear(attackName)
   }
 }

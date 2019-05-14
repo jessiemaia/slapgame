@@ -1,26 +1,31 @@
 import Bear from "../bear.js";
 import Item from "../item.js";
 
-let _bear = new Bear("Angry Bear", 100, 1, 5, 10);
-let stick = new Item("Stick!", 1, "Stick!");
+let _bear = new Bear("Angry Bear", 100, 1, 30, 50);
+let stick = new Item("Stick!", 1, "Rawr!");
 
 let _items = [stick]
 
-get Bear() {
-  return {
-    name: _target.name,
-    health: _target.health,
-    attacks: _target.attacks,
-    items: _target.items,
-    hits: _target.hits,
+export default class GameService {
+
+  get Bear() {
+    return {
+      name: _bear.name,
+      health: _bear.health,
+      attacks: _bear.attacks,
+      items: _bear.items,
+      hits: _bear.hits,
+    }
   }
-}
 
-addItemToBear(itemIndex) {
-  let targetItem = _items[itemIndex]
-  _target.items.push(targetItem)
-}
+  addItemToBear(itemIndex) {
+    let bearItem = _items[itemIndex]
+    _bear.items.push(bearItem)
+  }
 
-attackBear(attackName) {
-  let attackDamage = _target.attacks[attackName]
+  attackBear(attackName) {
+    let attackDamage = _bear.attacks[attackName]
+    _bear.health -= attackDamage
+    _bear.hits++
+  }
 }

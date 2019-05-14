@@ -1,4 +1,3 @@
-
 let bear = {
   name: 'Mr Bear',
   health: 100,

@@ -1,4 +1,4 @@
-import GameController from ".//components/game-controller.js";
+import GameController from "./models/components/game-controller.js";
 
 
 class App {
@@ -9,4 +9,11 @@ class App {
   }
 }
 
-window.app = new App()
+window['app'] = new App()
+
+//var app = {
+// controllers: {
+//     gameController: {}
+//   }
+// }
+
