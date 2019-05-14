@@ -7,7 +7,7 @@ let bear = {
   images: ['/assets/happybear2.jpg', '/assets/angrybear2.jpg', '/assets/claws.jpg'],
   items: []
 }
-
+kjbkjb
 let items = {
   run: { name: 'Run', modifier: -1 },
   mace: { name: 'Bear Mace', modifier: 20 },
