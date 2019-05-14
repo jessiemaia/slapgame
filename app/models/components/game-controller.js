@@ -16,20 +16,20 @@ function draw() {
 
 }
 
-function reset() {
-  let reset = 0
-  let template = `
-  
-  `
-}
+// function reset() {
+//   let reset = 0
+//   let template = `
+
+//   `
+// }
 
 export default class GameController {
   constructor() {
     draw();
   }
 
-  addItemToBear(itemIndex) {
-    _gameService.addItemToBear(itemIndex)
+  addItemToBear(itemName) {
+    _gameService.addItemToBear(itemName)
   }
 
   attackBear(attackName) {
